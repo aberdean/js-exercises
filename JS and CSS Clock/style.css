@@ -37,6 +37,20 @@ body {
   transform: translateY(-3px); /* account for the height of the clock hands */
 }
 
+.dot {
+  width: 15px;
+  height: 15px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 4;
+}
+
 .hand {
   width:50%;
   height:6px;
@@ -45,16 +59,19 @@ body {
   top:50%;
   transform-origin: 100%;
   transform: rotate(90deg);
-  transition: all 0.05s;
-  
 }
 
 .hour-hand {
   width: 40%;
   left: 10%;
+  z-index: 1;
+}
+
+.min-hand {
+  z-index: 2;
 }
 
 .second-hand {
   background: red;
-  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  z-index: 3;
 }
